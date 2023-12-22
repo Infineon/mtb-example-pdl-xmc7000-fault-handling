@@ -10,7 +10,7 @@
 *
 *
 *******************************************************************************
-* Copyright 2022, Cypress Semiconductor Corporation (an Infineon company) or
+* Copyright 2022-2023, Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
 *
 * This software, including source code, documentation and related
@@ -46,18 +46,17 @@
 * Include header files
 ******************************************************************************/
 
-#include "cy_pdl.h"
 #include "cyhal.h"
 #include "cybsp.h"
 #include "cy_retarget_io.h"
-
 
 /*******************************************************************************
 * Macros
 ********************************************************************************/
 #define CMD_USAGE_FAULT        ('u')
 #define CMD_BUS_FAULT          ('b')
-#define UART_TIMEOUT_MS        (10)    /* in milliseconds */
+/* in milliseconds */
+#define UART_TIMEOUT_MS        (10)    
 
 /*******************************************************************************
 * Function Prototypes
@@ -145,7 +144,6 @@ int main(void)
         }
     }
 }
-
 
 /*******************************************************************************
 * Function Name: configure_fault_register
